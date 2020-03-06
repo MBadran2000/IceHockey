@@ -68,4 +68,18 @@ class PlayersFindertest {
 							"4G4V4T4444"};
 		assertArrayEquals(pf.findPlayers(photo,4,16),players);
 	}
+	@Test
+	void test4() {
+		PlayersFinder pf = new PlayersFinder();
+		Point[] players = null;
+		String [] photo = null;
+		assertArrayEquals(pf.findPlayers(photo,1,3),players);
+	}
+	@Test
+	void test5() {
+		PlayersFinder pf = new PlayersFinder();
+		Point[] players = null;
+		String [] photo = {""};
+		assertArrayEquals(pf.findPlayers(photo,1,3),players);
+	}
 }
